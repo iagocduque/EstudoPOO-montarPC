@@ -8,17 +8,17 @@ Após um tempo pensando, decidi fazer um projeto orientado a objetos com peças 
 
 ## Conteúdo
 1. [Sobre o Java](#sobre-o-java)
-1. [Peças de Computador](#pecas-de-computador)
+1. [Peças de Computador](#peças-de-computador)
    1. [Gabinete (Case)](#gabinete-case)
-   1. [Fonte de alimentação (PSU)](#fonte-de-alimentacao-psu)
+   1. [Fonte de alimentação (PSU)](#fonte-de-alimentação-psu)
    1. [Placa-mãe (Mobo)](#placa-mae-mobo)
    1. [Processador (CPU)](#processador-cpu)
    1. [Armazenamento (SSD)](#armazenamento-ssd)
-   1. [Memória RAM (RAM)](#memoria-ram-ram)
-   1. [Placa de vídeo (GPU)](#placa-de-video-gpu)
+   1. [Memória RAM (RAM)](#memória-ram-ram)
+   1. [Placa de vídeo (GPU)](#placa-de-vídeo-gpu)
    1. [Sistema operacional (OS)](#sistema-operacional-os)
 1. [Computador (PC)](#computador-pc)
-1. [Main.java](#main-java)
+1. [Main.java](#mainjava)
 
 
 ## Sobre o Java
