@@ -88,6 +88,13 @@ Eu devo descrever cada peça de computador usada para criação das classes em J
 
 ### Gabinete (Case)
 ![Case](/imagens/case.png)
+Essa é a peça irá proteger todas as outras do computador. Conta com o botão de energia, de reiniciar, algumas entradas USB próprias e, por opção do cliente que queira, drives de CD e de disquete.
+
+__Argumentos necessários:__
+* Nome do gabinete (string, não vazia);
+* Formato do gabinete (string, não vazia);
+
+Olha, até o momento, não sei como lidar com listas, tuplas ou arrays em Java. Eu queria uma restrição em que o formato do gabinete deve ser uma na lista dos válidos (_Micro ATX, Mini ITX, etc._).
 
 
 ### Fonte de alimentação (PSU)
@@ -123,12 +130,12 @@ __Argumentos necessários:__
 * Conexão de placas de vídeo (string, não vazia);
 * Memória RAM máxima em _gigabytes_ (número inteiro, maior que 0).
 
-Olha, até o momento, não sei como lidar com listas, tuplas ou arrays em Java. Eu queria uma restrição em que o formato da placa-mãe deve ser uma na lista dos válidos (_Micro ATX, Mini ITX, etc._).
+Mais uma vez, não sei como lidar com listas, tuplas ou arrays em Java. Eu queria uma restrição em que o formato da placa-mãe deve ser uma na lista dos válidos (_Micro ATX, Mini ITX, etc._).
 
 
 ### Processador (CPU)
 ![CPU](/imagens/cpu.png)
-Do inglês, __C__entral __P__rocessing __U__nit ("unidade central de processamento"). Esta é a peça que considerada o "cérebro" do computador, pois é nela onde acontecem os cálculos, os pulsos em hertz, a execução das instruções presentes na memória cache, a unidade lógica e aritmética e outras coisas.
+Do inglês, __C__ entral __P__ rocessing __U__ nit ("unidade central de processamento"). Esta é a peça que considerada o "cérebro" do computador, pois é nela onde acontecem os cálculos, os pulsos em hertz, a execução das instruções presentes na memória cache, a unidade lógica e aritmética e outras coisas.
 
 __Argumentos necessários:__
 * Nome do processador (string, não vazia);
