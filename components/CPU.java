@@ -18,9 +18,10 @@ public class CPU {
   if (soc == null || soc.trim().isEmpty()) {throw new IllegalArgumentException("Não pode ser vazio ou nulo!");}
   if (ghzb <= 0) {throw new IllegalArgumentException("Deve ser maior que zero!");}
   if (ghza <= 0) {throw new IllegalArgumentException("Deve ser maior que zero!");}
-  if (n < 0) {throw new IllegalArgumentException("Deve ser maior que zero!");}
+  if (n <= 0) {throw new IllegalArgumentException("Deve ser maior que zero!");}
   if (thr <= 0) {throw new IllegalArgumentException("Deve ser maior que zero!");}
   if (w <= 0) {throw new IllegalArgumentException("Deve ser maior que zero!");}
+  if (ghza < ghzb) {throw new IllegalArgumentException("Frequência com overclock deve ser maior que a frequência base!");}
   if (thr < n) {throw new IllegalArgumentException("Número de threads deve ser igual ou maior que o de núcleos!");}
   this.nome=nome;
   this.soc=soc;
@@ -41,11 +42,11 @@ public class CPU {
  // ↓ NOTA: Para manter os atributos da classe como private e para serem visíveis por outras classes, os getters abaixo serão utilizados.
  public String verNome() {return nome;}
  public String verSocket() {return soc;}
- public double verFreq() {return ghz;}
+ public double verFrequencia() {return ghz;}
  public String veriGPU() {return igpu;}
  public void Overclock() {
   this.overclockd = !this.overclockd;
-  this.ghz = this.overclockd ? this.ghza : this.ghzb;
+  this.ghz = (this.overclockd) ? this.ghza : this.ghzb;
   System.out.println(this.overclockd ? "O overclock está ativado." : "O overclock está desativado.");
  }
 }
