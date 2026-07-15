@@ -23,7 +23,7 @@ public class PSU {
                 (ef >= 88) ? "80 Plus Gold" :
                 (ef >= 85) ? "80 Plus Silver" :
                 (ef >= 82) ? "80 Plus Bronze" :
-                (ef >= 80) ? "80 Plus" : "Não";
+                (ef >= 80) ? "80 Plus" : "Nenhuma";
  }
  // ↓ Simplesmente digitando o nome do instance dentro do parênteses no "System.out.println()" irá renderizar a string abaixo
  @Override
@@ -32,4 +32,9 @@ public class PSU {
  }
  // ↓ NOTA: Para manter os atributos da classe como private e para serem visíveis por outras classes, os getters abaixo serão utilizados.
  public String verNome() {return nome;}
+ public Integer verCorrenteContinua() {return w;}
+ public Integer verCorrenteAlternada() {return ac;}
+ public Integer verEficiencia() {return ef;}
+ public Integer verCalor() {return calor;}
+ public Integer verCertificado() {return certif;}
 }
