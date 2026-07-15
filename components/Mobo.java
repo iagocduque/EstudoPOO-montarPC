@@ -1,13 +1,13 @@
 package components; // ← Fará parte do pacote "components", junto com outras peças de computador.
 // ↓ Criando a classe Mobo (placa-mãe)
 public class Mobo {
- private String nome;
- private String ff; // ← Formato de placa-mãe
+ private String nome; // ← Nome da placa-mãe
+ private String ff; // ← Formato da placa-mãe
  private String soc; // ← Socket suportado de CPUs (ex.: AM4, LGA 1200, etc.)
  private String connssd; // ← Conexão (IDE, SATA, NVMe, etc.) para SSDs e HDDs
  private String connram; // ← Conexão (DDRx, DIMM, SIMM, etc.) para memórias RAM
  private String conngpu; // ← Conexão (PCI Express 3.0 x16, etc.) para GPUs
- private Integer maxgb;
+ private Integer maxgb; // Máximo de memória RAM suportada
  // ↓ Argumentos para criar a classe
  public Mobo (String nome, String ff, String soc, String connssd, String connram, String conngpu, Integer maxgb) {
   // ↓ NOTA: Os tratadores de exceção abaixo, marcados com if, são personalizados.
