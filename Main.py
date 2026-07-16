@@ -1,0 +1,54 @@
+from components import Case, PSU, Mobo, CPU, SSD, RAM, GPU, hcfGPU, OS # ← Usará todos os arquivos ".py" da pasta components
+from PC import PC
+
+def main():
+ aerocool = Case("AeroCool","ATX") # ← Criando um gabinete
+ coolermaster = Case("Cooler Master","ATX") # ← Criando outro gabinete
+  
+ evga = PSU("EVGA 500B",500,83) # ← Criando uma fonte de alimentação
+ corsair = PSU("Corsair CX600",600,83) # ← Criando outra fonte de alimentação
+  
+ asrock = Mobo("ASRock FM2A55M-VG3+","Micro ATX","FM2+","SATA","DDR3","PCIe x16 3.0",32) # ← Placa-mãe 1
+ asus = Mobo("ASUS M5A78L-M LX/BR","Micro ATX","AM3+","SATA","DDR3","PCIe x16 3.0",32) # ← Placa-mãe 2
+  
+ a10_7850k = CPU("AMD A10-7850K","FM2+",3.7,4.4,4,4,95,"Radeon R7 series") # ← Linha APU da AMD
+ fx_6300 = CPU("AMD FX-6300","AM3+",3.5,4.1,6,6,95,None) # ← Linha FX da AMD
+  
+ sandisk = SSD("SanDisk 500GB SATA",500,"SATA") # ← SSD da SanDisk
+ alltek = SSD("Alltek 256GB SATA",256,"SATA") # ← SSD da Alltek
+  
+ kingston = RAM("Kingston 8GB DDR3 1600MHz",8,"DDR3",1600) # ← Dois pentes de memória RAM, um objeto
+  
+ radeon = hcfGPU("AMD Radeon R7 240",2,"DDR3","PCIe x16 3.0","Radeon R7 series") # ← Placa de vídeo Radeon
+ nvidia = GPU("NVIDIA GeForce GTX 750 Ti",2,"GDDR5","PCIe x16 3.0") # ← Placa de vídeo GeForce
+  
+ windows = OS("Windows 10 Pro",64,32) # ← Sistema operacional Windows
+ ubuntu = OS("Ubuntu 20.04 Focal Fossa",64,25) # ← Distro Linux
+
+ # ↓ Montando um novo computador e fazendo operações de overclock
+ esteComputador = PC(coolermaster, corsair, asus, fx_6300, sandisk, kingston, nvidia, windows)
+ esteComputador.botaoEnergia() # ← Se desligado, irá ligar o computador
+ esteComputador.propriedades() # ← Vendo especificações básicas do computador
+ esteComputador.Overclock() # ← Não irá funcionar se o computador estiver ligado
+ esteComputador.botaoEnergia() # ← Se ligado, irá desligar o computador
+ esteComputador.Overclock() # ← Irá funcionar se o computador estiver desligado
+ esteComputador.botaoEnergia() # ← Ligando o computador
+ esteComputador.propriedades() # ← Novo valor da frequência da CPU
+ 
+ # ↓ Montando um outro computador e fazendo operações de Hybrid Crossfire
+ esseComputador = PC(aerocool, evga, asrock, a10_7850k, alltek, kingston, radeon, ubuntu)
+ esseComputador.botaoEnergia()
+ esseComputador.propriedades()
+ esseComputador.GPUdb() # ← Vendo especificações detalhadas da placa de vídeo
+ esseComputador.Overclock()
+ esseComputador.HybridCrossfire() # ← Também não irá funcionar se o computador estiver ligado
+ esseComputador.botaoEnergia()
+ esseComputador.Overclock()
+ esseComputador.HybridCrossfire()
+ esseComputador.botaoEnergia()
+ esseComputador.propriedades()
+ esseComputador.GPUdb() # ← Hybrid Crossfire ativado
+  
+
+if __name__ == "__main__":
+ main()
